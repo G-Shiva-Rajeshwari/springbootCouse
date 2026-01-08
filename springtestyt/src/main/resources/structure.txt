@@ -1,0 +1,71 @@
+StudentResponseDto                Student
+	|								 |
+	|________________________________|
+					|
+			StudentMapper			StudentRepository
+				|___________________________|
+							|
+						StudentService
+							|
+					  StudentController
+
+
+
+--- by feature
+com
+|
+|_myapp
+	|
+	|_ product
+	|
+	|_ order
+	|
+	|_ customer
+	|
+	|_ payment
+	
+--- by level
+com
+|
+|_ myapp
+	|
+	|- controllers
+	|
+	|- services
+	|
+	|- repositories
+	|
+	|- models
+	|
+	|_ utils
+	
+--- ddt approach(business domain)
+com
+|
+|_ myapp
+	|
+	|- patientManagement
+	|
+	|- billing
+	|
+	|- scheduling
+	|
+	|_medicalRecords
+	
+---bycomponent
+com
+|
+|_ myapp
+	|
+	|- usercomponent
+	|		|
+	|		|- controller
+	|		|
+	|		|_ service
+	|
+	|_ productcomponent
+			|
+			|- controllers
+			|
+			|_ service
+	
