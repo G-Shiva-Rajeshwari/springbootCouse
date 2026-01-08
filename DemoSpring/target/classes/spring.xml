@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+ <!-- setter injection --> 
+  <!--  <bean id="dev" class="com.gsrr.DemoSpring.Dev"> --> 
+<!--   <property name="age" value="12" ></property>-->
+
+<!-- Constructor injection -->
+<!--  <constructor-arg ref="lap1" ></constructor-arg> -->  
+
+<!--   <constructor-arg value="14"/>-->
+ 
+ <!--  <bean id="dev1" class="com.gsrr.DemoSpring.Dev"></bean>-->
+  
+    
+ <!-- loose coupling -->
+ <!-- in spring, name doesn't map to variable maps to setter/getter names so careful while writing name  -->
+<!-- 
+  <bean id="dev" class="com.gsrr.DemoSpring.Dev">
+
+<property name="comp" ref="desk"/></bean>
+
+  <bean id="lap1" class="com.gsrr.DemoSpring.laptop.Laptop"></bean>
+  <bean id="desk" class="com.gsrr.DemoSpring.desktop.Desktop"></bean>
+  -->
+  
+  <!-- autowiring - byname-->
+  <!-- byname > propertyname == beanid  ex:propertyname = comp -->
+  <!-- 
+    <bean id="dev" class="com.gsrr.DemoSpring.Dev" autowire="byName"/>
+    <bean id="comp" class="com.gsrr.DemoSpring.laptop.Laptop"></bean>
+      <bean id="comp1" class="com.gsrr.DemoSpring.desktop.Desktop"></bean>
+     -->
+     
+    <!-- autowiring - bytype -->
+    <!-- bytype > propertytype == beantype ex:type=computer -->
+     <bean id="dev" class="com.gsrr.DemoSpring.Dev" autowire="byType" />
+    <bean id="comp" class="com.gsrr.DemoSpring.laptop.Laptop" primary="true"></bean>
+    <bean id="comp1" class="com.gsrr.DemoSpring.desktop.Desktop"></bean>
+    
+</beans>
