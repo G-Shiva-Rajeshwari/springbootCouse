@@ -1,0 +1,29 @@
+@Configuration
+@Bean
+@Primary -> use when having multiple candidates of same type
+@Bean(name = "ddssd")
+@Qualifier("dd") -> similar to primary
+
+Spring Container: manages spring beans & their lifecycle.
+1.Bean Factory: Basic Spring Container
+2.Application Context: Adv. Spring Container with enterprise-specific features.
+	.Easy to use in web applications
+	.Easy internationalizaton
+	.Easy integeration with Spring AOP
+	
+java Bean vs Spring Bean
+//pojo - plain old java project
+	-> No constraint
+	->Any java Object is a POJO
+
+//Enterprise Java Bean -> javabean
+	-> no arg constructor
+	-> getters and setters
+	-> serializable
+	--> these all make up a java bean
+	
+// Spring Bean
+	->anything maintained by spring is a spring bean
+	->spring uses IOC container(Bean Factory or Application Context) to manage these objs
+	
+	
